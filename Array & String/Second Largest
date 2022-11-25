@@ -1,0 +1,33 @@
+https://practice.geeksforgeeks.org/problems/second-largest3735/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=second-largest
+
+TC  - O(N) , SP - O(1)
+
+class Solution {
+    int print2largest(int arr[], int n) {
+    
+	if(n<2)	return -1;
+	int largest=arr[0];
+
+        int seclargest=-1;
+
+       for(int i=0;i<n;i++){
+
+           if(largest<arr[i]){
+
+               largest=arr[i];
+
+           }
+       }
+
+       for(int i=0;i<n;i++){
+
+           if(arr[i]>seclargest && arr[i]<largest){
+
+               seclargest=arr[i];
+               }
+
+       }
+
+       return seclargest;
+    }
+}
